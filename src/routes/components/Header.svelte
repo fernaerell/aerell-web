@@ -37,12 +37,20 @@
 			}
 		},
 		{
-			title: 'Discord',
+			title: 'Discord Account',
+			href: 'https://discord.com/users/916247044061032469',
+			img: {
+				src: discordIconWebp,
+				alt: 'discord icon'
+			}
+		},
+		{
+			title: 'Discord Server',
 			href: 'https://discord.gg/pfWTVU3j5H',
 			img: {
 				src: discordIconWebp,
 				alt: 'discord icon'
-			},
+			}
 		},
 		{
 			title: 'X',
@@ -163,7 +171,7 @@
 			</a>
 		{/each}
 	</div>
-	<br>
+	<br />
 	<div class="inset-x-0 bottom-8 flex animate-bounce flex-col items-center">
 		<span class="mb-2 text-center text-sm text-gray-400">Scroll to explore</span><svg
 			class="h-6 w-6 text-gray-400"
