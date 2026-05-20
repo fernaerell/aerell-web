@@ -11,6 +11,7 @@
 	import youtubeIconWebp from '$lib/assets/images/icons/social_media/youtube.webp';
 	import gmailIconWebp from '$lib/assets/images/icons/social_media/gmail.webp';
 	import discordIconWebp from '$lib/assets/images/icons/social_media/discord.webp';
+	import discordServerIconWebp from '$lib/assets/images/icons/discord_server/leva_world.webp';
 
 	import { onMount } from 'svelte';
 	import Typed, { type TypedOptions } from 'typed.js';
@@ -37,12 +38,20 @@
 			}
 		},
 		{
-			title: 'Discord',
-			href: 'https://discord.gg/pfWTVU3j5H',
+			title: 'Discord Account',
+			href: 'https://discord.com/users/916247044061032469',
 			img: {
 				src: discordIconWebp,
 				alt: 'discord icon'
-			},
+			}
+		},
+		{
+			title: 'Discord Server',
+			href: 'https://discord.gg/pfWTVU3j5H',
+			img: {
+				src: discordServerIconWebp,
+				alt: 'discord server icon'
+			}
 		},
 		{
 			title: 'X',
@@ -163,7 +172,7 @@
 			</a>
 		{/each}
 	</div>
-	<br>
+	<br />
 	<div class="inset-x-0 bottom-8 flex animate-bounce flex-col items-center">
 		<span class="mb-2 text-center text-sm text-gray-400">Scroll to explore</span><svg
 			class="h-6 w-6 text-gray-400"
