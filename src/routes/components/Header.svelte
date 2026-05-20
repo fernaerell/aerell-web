@@ -11,6 +11,7 @@
 	import youtubeIconWebp from '$lib/assets/images/icons/social_media/youtube.webp';
 	import gmailIconWebp from '$lib/assets/images/icons/social_media/gmail.webp';
 	import discordIconWebp from '$lib/assets/images/icons/social_media/discord.webp';
+	import discordServerIconWebp from '$lib/assets/images/icons/discord_server/leva_world.webp';
 
 	import { onMount } from 'svelte';
 	import Typed, { type TypedOptions } from 'typed.js';
@@ -48,8 +49,8 @@
 			title: 'Discord Server',
 			href: 'https://discord.gg/pfWTVU3j5H',
 			img: {
-				src: discordIconWebp,
-				alt: 'discord icon'
+				src: discordServerIconWebp,
+				alt: 'discord server icon'
 			}
 		},
 		{
