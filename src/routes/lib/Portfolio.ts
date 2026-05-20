@@ -86,7 +86,17 @@ export const portfolios: Portfolio[] = [
 			src: 'https://i3.ytimg.com/vi/s9zcFahb3wg/maxresdefault.jpg',
 			alt: 'Aerell Flags Image'
 		},
-		title: 'Aerell Flags & Headbands',
+		title: 'Aerell Flags',
+		game: TAG_GAME_MINECRAFT,
+		types: [TAG_TYPE_ADDON]
+	},
+	{
+		href: 'https://youtu.be/s9zcFahb3wg?si=YXrmY51ovjbmKEPY',
+		img: {
+			src: 'https://i3.ytimg.com/vi/s9zcFahb3wg/maxresdefault.jpg',
+			alt: 'Aerell Flags Image'
+		},
+		title: 'Aerell Headbands',
 		game: TAG_GAME_MINECRAFT,
 		types: [TAG_TYPE_ADDON]
 	},
