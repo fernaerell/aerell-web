@@ -26,6 +26,9 @@ const TAG_GAME_MINECRAFT = 'Minecraft';
 const TAG_GAME_GTA_V = 'GTA V';
 const TAG_TYPE_ADDON = 'Addon';
 const TAG_TYPE_MOD = 'Mod';
+const TAG_TYPE_COMMISSION = 'Commission';
+const TAG_TYPE_CLIENT_WORK = 'Client Work';
+const TAG_TYPE_CLIENT_PROJECT = 'Client Project';
 
 export const portfolios: Portfolio[] = [
 	{
@@ -58,7 +61,7 @@ export const portfolios: Portfolio[] = [
 		},
 		title: 'Sawit',
 		game: TAG_GAME_MINECRAFT,
-		types: [TAG_TYPE_MOD]
+		types: [TAG_TYPE_MOD, TAG_TYPE_COMMISSION, TAG_TYPE_CLIENT_PROJECT]
 	},
 	{
 		href: 'https://youtu.be/UFIP6Ipsgcs?si=A3Xmz0KNU3oUcHrE',
@@ -106,9 +109,9 @@ export const portfolios: Portfolio[] = [
 			src: titans_webp,
 			alt: 'Titans Image'
 		},
-		title: 'Titans (Model from client)',
+		title: 'Titans',
 		game: TAG_GAME_MINECRAFT,
-		types: [TAG_TYPE_MOD]
+		types: [TAG_TYPE_MOD, TAG_TYPE_COMMISSION, TAG_TYPE_CLIENT_PROJECT]
 	},
 	{
 		href: 'https://drive.google.com/file/d/1S_3SZ2BntmKT86rFCRFNUsNCnLo71r64/view?usp=sharing',
@@ -116,9 +119,9 @@ export const portfolios: Portfolio[] = [
 			src: additional_mobs_webp,
 			alt: 'Additional Mobs Image'
 		},
-		title: 'Additional Mobs (Model from client)',
+		title: 'Additional Mobs',
 		game: TAG_GAME_MINECRAFT,
-		types: []
+		types: [TAG_TYPE_COMMISSION, TAG_TYPE_CLIENT_WORK]
 	},
 	{
 		href: 'https://www.youtube.com/playlist?list=PLVkP-VbRczeQ61-EcY1Tl7UnRdZ-e2_H2',
