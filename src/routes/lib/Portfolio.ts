@@ -182,7 +182,8 @@ export const portfolios: Portfolio[] = [
 		},
 		title: 'Ramadhan',
 		game: TAG_GAME_MINECRAFT,
-		types: [TAG_TYPE_ADDON, TAG_TYPE_MOD]
+		types: [TAG_TYPE_ADDON, TAG_TYPE_MOD],
+		short_description: 'Indonesian Ramadhan culture with custom interactive mechanics.'
 	},
 	{
 		href: 'https://www.youtube.com/watch?v=A1Ng-_zSoOc',
@@ -192,7 +193,8 @@ export const portfolios: Portfolio[] = [
 		},
 		title: 'Random Ore Generator',
 		game: TAG_GAME_MINECRAFT,
-		types: [TAG_TYPE_ADDON]
+		types: [TAG_TYPE_ADDON],
+		short_description: 'Converts cobblestone generators to produce randomized ores.'
 	},
 	{
 		href: 'https://www.youtube.com/watch?v=JgvSrLJ9Fkw',
@@ -202,7 +204,8 @@ export const portfolios: Portfolio[] = [
 		},
 		title: 'Flat World Village',
 		game: TAG_GAME_MINECRAFT,
-		types: [TAG_TYPE_ADDON]
+		types: [TAG_TYPE_ADDON],
+		short_description: 'Natural village generation in Minecraft Bedrock flat worlds.'
 	},
 	{
 		href: 'https://id.gta5-mods.com/scripts/ragdoll-player-when-shot-fern-aerell',
@@ -212,6 +215,7 @@ export const portfolios: Portfolio[] = [
 		},
 		title: 'Ragdoll Player When Shot',
 		game: TAG_GAME_GTA_V,
-		types: [TAG_TYPE_MOD]
+		types: [TAG_TYPE_MOD],
+		short_description: 'Immersive realism mod triggering instant player ragdoll when shot.'
 	}
 ];
