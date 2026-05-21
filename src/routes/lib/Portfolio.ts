@@ -28,6 +28,17 @@ export const getTagsFromPortfolios = (portfolios: Portfolio[]): string[] => {
 	return result;
 };
 
+export const portfolioIncludes = (portfolio: Portfolio, search: string): boolean => {
+	const searchLower = search.toLowerCase();
+	const tags = getTagsFromPortfolio(portfolio);
+	if (tags.filter((tag) => tag.toLowerCase().includes(searchLower)).length > 0) return true;
+	if (portfolio.href.toLowerCase().includes(searchLower)) return true;
+	if (portfolio.id?.toLowerCase().includes(searchLower)) return true;
+	if (portfolio.short_description?.toLowerCase().includes(searchLower)) return true;
+	if (portfolio.title.toLowerCase().includes(searchLower)) return true;
+	return false;
+};
+
 import additional_mobs_webp from '$lib/assets/images/additional_mobs.webp';
 import sawit_webp from '$lib/assets/images/sawit.webp';
 import titans_webp from '$lib/assets/images/titans.webp';

@@ -2,7 +2,12 @@
 	import Search from './Search.svelte';
 	import Filter from './Filter.svelte';
 
-	import { getTagsFromPortfolio, getTagsFromPortfolios, portfolios } from '../lib/Portfolio';
+	import {
+		getTagsFromPortfolio,
+		getTagsFromPortfolios,
+		portfolioIncludes,
+		portfolios
+	} from '../lib/Portfolio';
 	import { resolve } from '$app/paths';
 
 	interface Props {
@@ -21,6 +26,7 @@
 	tags.push(...getTagsFromPortfolios(portfolios));
 
 	let tag: string = $state(TAG_ALL);
+	let search: string = $state('');
 </script>
 
 <div class="flex flex-col items-center gap-12.5 p-12.5">
@@ -31,14 +37,16 @@
 		{#if props.show_search_and_filter}
 			<div class="flex w-full flex-row items-center gap-2.5">
 				<Filter {tags} bind:value={tag} />
-				<Search />
+				<Search bind:value={search} />
 			</div>
 		{/if}
 		{#if portfolios.length > 0}
 			<div
 				class="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"
 			>
-				{#each (props.max ? portfolios.slice(0, props.max) : portfolios).filter( (p) => (tag == TAG_ALL ? true : p.games?.includes(tag) || p.types?.includes(tag)) ) as portfolio, index (index)}
+				{#each (props.max ? portfolios.slice(0, props.max) : portfolios)
+					.filter((p) => (tag == TAG_ALL ? true : p.games?.includes(tag) || p.types?.includes(tag)))
+					.filter( (p) => (search.length == 0 ? true : portfolioIncludes(p, search)) ) as portfolio, index (index)}
 					<a
 						href={portfolio.id ? `/portfolio/${portfolio.id}` : portfolio.href}
 						rel="external"
