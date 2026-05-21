@@ -8,6 +8,7 @@
 	interface Props {
 		prefix_title?: string;
 		show_more_button: boolean;
+		show_search_and_filter: boolean;
 		max?: number;
 	}
 
@@ -19,10 +20,12 @@
 		{props.prefix_title ?? ''} Portfolio
 	</h1>
 	<div class="flex h-full w-full flex-1 flex-col items-center gap-5">
-		<!-- <div class="flex w-full flex-row items-center gap-2.5">
-			<Filter />
-			<Search />
-		</div> -->
+		{#if props.show_search_and_filter}
+			<div class="flex w-full flex-row items-center gap-2.5">
+				<Filter />
+				<Search />
+			</div>
+		{/if}
 		{#if portfolios.length > 0}
 			<div
 				class="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"
