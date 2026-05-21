@@ -11,11 +11,32 @@ interface Portfolio {
 	short_description?: string;
 }
 
-export const getTags = (portfolio: Portfolio): string[] => {
+export const getTagsFromPortfolio = (portfolio: Portfolio): string[] => {
 	const result: string[] = [];
 	if (portfolio.games) portfolio.games.forEach((game) => result.push(game));
 	portfolio.types?.forEach((type) => result.push(type));
 	return result;
+};
+
+export const getTagsFromPortfolios = (portfolios: Portfolio[]): string[] => {
+	const result: string[] = [];
+	portfolios.forEach((portfolio) =>
+		getTagsFromPortfolio(portfolio).forEach((tag) => {
+			if (!result.includes(tag)) result.push(tag);
+		})
+	);
+	return result;
+};
+
+export const portfolioIncludes = (portfolio: Portfolio, search: string): boolean => {
+	const searchLower = search.toLowerCase();
+	const tags = getTagsFromPortfolio(portfolio);
+	if (tags.filter((tag) => tag.toLowerCase().includes(searchLower)).length > 0) return true;
+	if (portfolio.href.toLowerCase().includes(searchLower)) return true;
+	if (portfolio.id?.toLowerCase().includes(searchLower)) return true;
+	if (portfolio.short_description?.toLowerCase().includes(searchLower)) return true;
+	if (portfolio.title.toLowerCase().includes(searchLower)) return true;
+	return false;
 };
 
 import additional_mobs_webp from '$lib/assets/images/additional_mobs.webp';
