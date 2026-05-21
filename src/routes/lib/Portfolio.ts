@@ -61,7 +61,8 @@ export const portfolios: Portfolio[] = [
 		},
 		title: 'Sawit',
 		game: TAG_GAME_MINECRAFT,
-		types: [TAG_TYPE_MOD, TAG_TYPE_COMMISSION, TAG_TYPE_CLIENT_PROJECT]
+		types: [TAG_TYPE_MOD, TAG_TYPE_COMMISSION, TAG_TYPE_CLIENT_PROJECT],
+		short_description: 'Adding a palm tree, complete with fruit, mechanisms, and behavior.'
 	},
 	{
 		href: 'https://youtu.be/UFIP6Ipsgcs?si=A3Xmz0KNU3oUcHrE',
