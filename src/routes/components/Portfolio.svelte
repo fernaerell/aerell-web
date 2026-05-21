@@ -2,7 +2,7 @@
 	import Search from './Search.svelte';
 	import Filter from './Filter.svelte';
 
-	import { getTags, portfolios } from '../lib/Portfolio';
+	import { getTagsFromPortfolio, getTagsFromPortfolios, portfolios } from '../lib/Portfolio';
 	import { resolve } from '$app/paths';
 
 	interface Props {
@@ -13,6 +13,14 @@
 	}
 
 	const props: Props = $props();
+
+	const tags: string[] = [];
+	const TAG_ALL = 'All';
+
+	tags.push(TAG_ALL);
+	tags.push(...getTagsFromPortfolios(portfolios));
+
+	let tag: string = $state(TAG_ALL);
 </script>
 
 <div class="flex flex-col items-center gap-12.5 p-12.5">
@@ -22,7 +30,7 @@
 	<div class="flex h-full w-full flex-1 flex-col items-center gap-5">
 		{#if props.show_search_and_filter}
 			<div class="flex w-full flex-row items-center gap-2.5">
-				<Filter />
+				<Filter {tags} bind:value={tag} />
 				<Search />
 			</div>
 		{/if}
@@ -30,7 +38,7 @@
 			<div
 				class="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5"
 			>
-				{#each props.max ? portfolios.slice(0, props.max) : portfolios as portfolio, index (index)}
+				{#each (props.max ? portfolios.slice(0, props.max) : portfolios).filter( (p) => (tag == TAG_ALL ? true : p.games?.includes(tag) || p.types?.includes(tag)) ) as portfolio, index (index)}
 					<a
 						href={portfolio.id ? `/portfolio/${portfolio.id}` : portfolio.href}
 						rel="external"
@@ -51,7 +59,7 @@
 								{portfolio.short_description ?? 'No description.'}
 							</p>
 							<div class="flex flex-row flex-wrap gap-1.5">
-								{#each getTags(portfolio) as tag, index (index)}
+								{#each getTagsFromPortfolio(portfolio) as tag, index (index)}
 									<span class="rounded-md border border-[#ffffff48] px-2.5 py-1 text-xs font-medium"
 										>{tag}</span
 									>
