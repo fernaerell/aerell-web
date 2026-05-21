@@ -6,14 +6,14 @@ interface Portfolio {
 		alt: string;
 	};
 	title: string;
-	game?: string;
+	games?: string[];
 	types?: string[];
 	short_description?: string;
 }
 
 export const getTags = (portfolio: Portfolio): string[] => {
 	const result: string[] = [];
-	if (portfolio.game) result.push(portfolio.game);
+	if (portfolio.games) portfolio.games.forEach((game) => result.push(game));
 	portfolio.types?.forEach((type) => result.push(type));
 	return result;
 };
@@ -22,7 +22,8 @@ import additional_mobs_webp from '$lib/assets/images/additional_mobs.webp';
 import sawit_webp from '$lib/assets/images/sawit.webp';
 import titans_webp from '$lib/assets/images/titans.webp';
 
-const TAG_GAME_MINECRAFT = 'Minecraft';
+const TAG_GAME_MINECRAFT_JAVA = 'Minecraft Java';
+const TAG_GAME_MINECRAFT_BEDROCK = 'Minecraft Bedrock';
 const TAG_GAME_GTA_V = 'GTA V';
 const TAG_TYPE_ADDON = 'Addon';
 const TAG_TYPE_MOD = 'Mod';
@@ -38,7 +39,7 @@ export const portfolios: Portfolio[] = [
 			alt: 'Aerell Fasting Image'
 		},
 		title: 'Aerell Fasting',
-		game: TAG_GAME_MINECRAFT,
+		games: [TAG_GAME_MINECRAFT_BEDROCK],
 		types: [TAG_TYPE_ADDON],
 		short_description: 'An immersive 30-day fasting challenge for Minecraft.'
 	},
@@ -49,7 +50,7 @@ export const portfolios: Portfolio[] = [
 			alt: 'Aerell Time Text Image'
 		},
 		title: 'Aerell Time Text',
-		game: TAG_GAME_MINECRAFT,
+		games: [TAG_GAME_MINECRAFT_BEDROCK],
 		types: [TAG_TYPE_ADDON],
 		short_description: 'Display a 24-hour digital clock right on your Minecraft screen.'
 	},
@@ -60,7 +61,7 @@ export const portfolios: Portfolio[] = [
 			alt: 'Sawit Image'
 		},
 		title: 'Sawit',
-		game: TAG_GAME_MINECRAFT,
+		games: [TAG_GAME_MINECRAFT_JAVA],
 		types: [TAG_TYPE_MOD, TAG_TYPE_COMMISSION, TAG_TYPE_CLIENT_PROJECT],
 		short_description: 'Palm tree, complete with fruit, mechanisms, and behavior.'
 	},
@@ -71,7 +72,7 @@ export const portfolios: Portfolio[] = [
 			alt: 'Aerell NPC Image'
 		},
 		title: 'Aerell NPC',
-		game: TAG_GAME_MINECRAFT,
+		games: [TAG_GAME_MINECRAFT_BEDROCK],
 		types: [TAG_TYPE_ADDON],
 		short_description: 'NPC for accompany player to playing Minecraft.'
 	},
@@ -82,7 +83,7 @@ export const portfolios: Portfolio[] = [
 			alt: 'Aerell Crafter Gif'
 		},
 		title: 'Aerell Crafter',
-		game: TAG_GAME_MINECRAFT,
+		games: [TAG_GAME_MINECRAFT_JAVA],
 		types: [TAG_TYPE_MOD],
 		short_description: 'Making crafter block more user friendly.'
 	},
@@ -93,7 +94,7 @@ export const portfolios: Portfolio[] = [
 			alt: 'Aerell Flags Image'
 		},
 		title: 'Aerell Flags',
-		game: TAG_GAME_MINECRAFT,
+		games: [TAG_GAME_MINECRAFT_BEDROCK],
 		types: [TAG_TYPE_ADDON],
 		short_description: 'Interactive flags to decorate your Minecraft world with style.'
 	},
@@ -104,7 +105,7 @@ export const portfolios: Portfolio[] = [
 			alt: 'Aerell Flags Image'
 		},
 		title: 'Aerell Headbands',
-		game: TAG_GAME_MINECRAFT,
+		games: [TAG_GAME_MINECRAFT_BEDROCK],
 		types: [TAG_TYPE_ADDON],
 		short_description: 'Stylish headbands to customize your look in Minecraft.'
 	},
@@ -115,7 +116,7 @@ export const portfolios: Portfolio[] = [
 			alt: 'Titans Image'
 		},
 		title: 'Titans',
-		game: TAG_GAME_MINECRAFT,
+		games: [TAG_GAME_MINECRAFT_JAVA],
 		types: [TAG_TYPE_MOD, TAG_TYPE_COMMISSION, TAG_TYPE_CLIENT_PROJECT],
 		short_description: 'Players can transform into a titan with unique skills and behaviors.'
 	},
@@ -126,7 +127,7 @@ export const portfolios: Portfolio[] = [
 			alt: 'Additional Mobs Image'
 		},
 		title: 'Additional Mobs',
-		game: TAG_GAME_MINECRAFT,
+		games: [TAG_GAME_MINECRAFT_JAVA],
 		types: [TAG_TYPE_COMMISSION, TAG_TYPE_CLIENT_WORK],
 		short_description: 'Integrating custom models using MythicMobs and Model Engine.'
 	},
@@ -137,7 +138,7 @@ export const portfolios: Portfolio[] = [
 			alt: 'Idul Adha Image'
 		},
 		title: 'Idul Adha',
-		game: TAG_GAME_MINECRAFT,
+		games: [TAG_GAME_MINECRAFT_BEDROCK],
 		types: [TAG_TYPE_ADDON],
 		short_description: 'Interactive Qurban rituals and beef distribution mechanics.'
 	},
@@ -148,7 +149,7 @@ export const portfolios: Portfolio[] = [
 			alt: 'Digital Clock Image'
 		},
 		title: 'Digital Clock',
-		game: TAG_GAME_MINECRAFT,
+		games: [TAG_GAME_MINECRAFT_BEDROCK],
 		types: [TAG_TYPE_ADDON],
 		short_description: 'Functional digital clock syncing with in-game Minecraft time.'
 	},
@@ -159,7 +160,7 @@ export const portfolios: Portfolio[] = [
 			alt: 'Smart Torch Image'
 		},
 		title: 'Smart Torch',
-		game: TAG_GAME_MINECRAFT,
+		games: [TAG_GAME_MINECRAFT_BEDROCK],
 		types: [TAG_TYPE_ADDON],
 		short_description: '3D torch with off-hand support and dynamic emission lighting.'
 	},
@@ -170,7 +171,7 @@ export const portfolios: Portfolio[] = [
 			alt: 'Partner Image'
 		},
 		title: 'Partner',
-		game: TAG_GAME_MINECRAFT,
+		games: [TAG_GAME_MINECRAFT_BEDROCK],
 		types: [TAG_TYPE_ADDON],
 		short_description: 'A survival partner that follows, fights, and assists players.'
 	},
@@ -181,7 +182,7 @@ export const portfolios: Portfolio[] = [
 			alt: 'Ramadhan Image'
 		},
 		title: 'Ramadhan',
-		game: TAG_GAME_MINECRAFT,
+		games: [TAG_GAME_MINECRAFT_BEDROCK, TAG_GAME_MINECRAFT_JAVA],
 		types: [TAG_TYPE_ADDON, TAG_TYPE_MOD],
 		short_description: 'Indonesian Ramadhan culture with custom interactive mechanics.'
 	},
@@ -192,7 +193,7 @@ export const portfolios: Portfolio[] = [
 			alt: 'Random Ore Generator Image'
 		},
 		title: 'Random Ore Generator',
-		game: TAG_GAME_MINECRAFT,
+		games: [TAG_GAME_MINECRAFT_BEDROCK],
 		types: [TAG_TYPE_ADDON],
 		short_description: 'Converts cobblestone generators to produce randomized ores.'
 	},
@@ -203,7 +204,7 @@ export const portfolios: Portfolio[] = [
 			alt: 'Flat World Village Image'
 		},
 		title: 'Flat World Village',
-		game: TAG_GAME_MINECRAFT,
+		games: [TAG_GAME_MINECRAFT_BEDROCK],
 		types: [TAG_TYPE_ADDON],
 		short_description: 'Natural village generation in Minecraft Bedrock flat worlds.'
 	},
@@ -214,7 +215,7 @@ export const portfolios: Portfolio[] = [
 			alt: 'Ragdoll Player When Shot Image'
 		},
 		title: 'Ragdoll Player When Shot',
-		game: TAG_GAME_GTA_V,
+		games: [TAG_GAME_GTA_V],
 		types: [TAG_TYPE_MOD],
 		short_description: 'Immersive realism mod triggering instant player ragdoll when shot.'
 	}
