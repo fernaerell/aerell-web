@@ -105,7 +105,8 @@ export const portfolios: Portfolio[] = [
 		},
 		title: 'Aerell Headbands',
 		game: TAG_GAME_MINECRAFT,
-		types: [TAG_TYPE_ADDON]
+		types: [TAG_TYPE_ADDON],
+		short_description: 'Stylish headbands to customize your look in Minecraft.'
 	},
 	{
 		href: 'https://drive.google.com/file/d/1rNik7oqhqOC9L66j09OXFqy4vEqZIim_/view?usp=sharing',
@@ -115,7 +116,8 @@ export const portfolios: Portfolio[] = [
 		},
 		title: 'Titans',
 		game: TAG_GAME_MINECRAFT,
-		types: [TAG_TYPE_MOD, TAG_TYPE_COMMISSION, TAG_TYPE_CLIENT_PROJECT]
+		types: [TAG_TYPE_MOD, TAG_TYPE_COMMISSION, TAG_TYPE_CLIENT_PROJECT],
+		short_description: 'Players can transform into a titan with unique skills and behaviors.'
 	},
 	{
 		href: 'https://drive.google.com/file/d/1S_3SZ2BntmKT86rFCRFNUsNCnLo71r64/view?usp=sharing',
@@ -125,7 +127,8 @@ export const portfolios: Portfolio[] = [
 		},
 		title: 'Additional Mobs',
 		game: TAG_GAME_MINECRAFT,
-		types: [TAG_TYPE_COMMISSION, TAG_TYPE_CLIENT_WORK]
+		types: [TAG_TYPE_COMMISSION, TAG_TYPE_CLIENT_WORK],
+		short_description: 'Integrating custom models using MythicMobs and Model Engine.'
 	},
 	{
 		href: 'https://www.youtube.com/playlist?list=PLVkP-VbRczeQ61-EcY1Tl7UnRdZ-e2_H2',
@@ -135,7 +138,8 @@ export const portfolios: Portfolio[] = [
 		},
 		title: 'Idul Adha',
 		game: TAG_GAME_MINECRAFT,
-		types: [TAG_TYPE_ADDON]
+		types: [TAG_TYPE_ADDON],
+		short_description: 'Interactive Qurban rituals and beef distribution mechanics.'
 	},
 	{
 		href: 'https://mcpedl.com/reltech-digital-clock-addon/',
@@ -145,7 +149,8 @@ export const portfolios: Portfolio[] = [
 		},
 		title: 'Digital Clock',
 		game: TAG_GAME_MINECRAFT,
-		types: [TAG_TYPE_ADDON]
+		types: [TAG_TYPE_ADDON],
+		short_description: 'Functional digital clock syncing with in-game Minecraft time.'
 	},
 	{
 		href: 'https://youtu.be/A2PakxHFyfg?si=UyegmsNE-2cJP959',
@@ -155,7 +160,8 @@ export const portfolios: Portfolio[] = [
 		},
 		title: 'Smart Torch',
 		game: TAG_GAME_MINECRAFT,
-		types: [TAG_TYPE_ADDON]
+		types: [TAG_TYPE_ADDON],
+		short_description: '3D torch with off-hand support and dynamic emission lighting.'
 	},
 	{
 		href: 'https://www.youtube.com/playlist?list=PLVkP-VbRczeT7TDkvwX8lRURfQKbVEDkx',
@@ -165,7 +171,8 @@ export const portfolios: Portfolio[] = [
 		},
 		title: 'Partner',
 		game: TAG_GAME_MINECRAFT,
-		types: [TAG_TYPE_ADDON]
+		types: [TAG_TYPE_ADDON],
+		short_description: 'A survival partner that follows, fights, and assists players.'
 	},
 	{
 		href: 'https://www.youtube.com/playlist?list=PLVkP-VbRczeQN_vs4PjZxNdxMvF-79mky',
