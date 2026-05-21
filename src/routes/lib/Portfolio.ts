@@ -62,7 +62,7 @@ export const portfolios: Portfolio[] = [
 		title: 'Sawit',
 		game: TAG_GAME_MINECRAFT,
 		types: [TAG_TYPE_MOD, TAG_TYPE_COMMISSION, TAG_TYPE_CLIENT_PROJECT],
-		short_description: 'Adding a palm tree, complete with fruit, mechanisms, and behavior.'
+		short_description: 'Palm tree, complete with fruit, mechanisms, and behavior.'
 	},
 	{
 		href: 'https://youtu.be/UFIP6Ipsgcs?si=A3Xmz0KNU3oUcHrE',
@@ -72,7 +72,8 @@ export const portfolios: Portfolio[] = [
 		},
 		title: 'Aerell NPC',
 		game: TAG_GAME_MINECRAFT,
-		types: [TAG_TYPE_ADDON]
+		types: [TAG_TYPE_ADDON],
+		short_description: 'NPC for accompany player to playing Minecraft.'
 	},
 	{
 		href: 'https://www.curseforge.com/minecraft/mc-mods/aerellcrafter',
@@ -82,7 +83,8 @@ export const portfolios: Portfolio[] = [
 		},
 		title: 'Aerell Crafter',
 		game: TAG_GAME_MINECRAFT,
-		types: [TAG_TYPE_MOD]
+		types: [TAG_TYPE_MOD],
+		short_description: 'Making crafter block more user friendly.'
 	},
 	{
 		href: 'https://youtu.be/s9zcFahb3wg?si=YXrmY51ovjbmKEPY',
@@ -92,7 +94,8 @@ export const portfolios: Portfolio[] = [
 		},
 		title: 'Aerell Flags',
 		game: TAG_GAME_MINECRAFT,
-		types: [TAG_TYPE_ADDON]
+		types: [TAG_TYPE_ADDON],
+		short_description: 'Interactive flags to decorate your Minecraft world with style.'
 	},
 	{
 		href: 'https://youtu.be/s9zcFahb3wg?si=YXrmY51ovjbmKEPY',
